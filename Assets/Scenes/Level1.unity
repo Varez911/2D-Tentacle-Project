@@ -664,6 +664,72 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!1001 &400488990
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1895015808}
+    m_Modifications:
+    - target: {fileID: 8063906278297718282, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_Name
+      value: Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718284, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 694120fcc7cc93a46a4266f9ff05d9ec, type: 3}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+--- !u!4 &400488991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8063906278297718287, guid: 848736e7b6bf3024782232bbe373695c, type: 3}
+  m_PrefabInstance: {fileID: 400488990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &467829554
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +916,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -919,7 +985,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1895015808}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1899,7 +1965,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 161e929640ff1844c96f3eee51f17069, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1948,6 +2014,7 @@ Transform:
   - {fileID: 1282367109}
   - {fileID: 241901260}
   - {fileID: 361744908}
+  - {fileID: 400488991}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1972,7 +2039,6 @@ MonoBehaviour:
   Tentacles1: {fileID: 2030243597}
   Tentacles2: {fileID: 329672936}
   Tentacles3: {fileID: 1282367110}
-  Tentacles4: {fileID: 361744909}
   maxDistance: 17
   Debug: 0
 --- !u!114 &1895015810
