@@ -30,7 +30,14 @@ public class Shoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        points = 0;
+
+        Tentacles1.SetPosition(0, lokasiTembakan.position);
+        Tentacles2.SetPosition(0, lokasiTembakan.position);
+        Tentacles3.SetPosition(0, lokasiTembakan.position);
+        Tentacles1.SetPosition(1, lokasiTembakan.position);
+        Tentacles2.SetPosition(1, lokasiTembakan.position);
+        Tentacles3.SetPosition(1, lokasiTembakan.position);
     }
 
     // Update is called once per frame
