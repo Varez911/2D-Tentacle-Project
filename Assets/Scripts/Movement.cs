@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public GameObject FirePoint1;
     [SerializeField]
     public Rigidbody2D body;
     [Range(1, 5)]
     public int multipler;
+
+
     
     private float speed;
     public Vector3 mousePos;
@@ -29,6 +32,7 @@ public class Movement : MonoBehaviour
             isMoving = true;
         }
         */
+        
     }
 
     void FixedUpdate()
@@ -57,7 +61,6 @@ public class Movement : MonoBehaviour
             isMoving = false;
         }
         
-    }
-    
+    }    
     
 }

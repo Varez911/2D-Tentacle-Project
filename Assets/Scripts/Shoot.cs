@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿//using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -17,7 +19,7 @@ public class Shoot : MonoBehaviour
     public LineRenderer Tentacles3;
     // public LineRenderer Tentacles4;
     public float maxDistance;
-    public bool Debug;
+    //public bool Debug;
 
     private int points;
     private GameObject[] listInstate = new GameObject[10];
@@ -61,7 +63,6 @@ public class Shoot : MonoBehaviour
         {            
             listObjects.Add(Instantiate(pointCollide, (Vector3)hit.point, lokasiTembakan.rotation));
             
-
             switch(points % 3)
             {
                 case 0:
@@ -74,10 +75,12 @@ public class Shoot : MonoBehaviour
                     Tentacles3.SetPosition(1, hit.point);
                     break;
             }
+
             if (points > 0)
             {
                 Vector3 tujuan = Vector3.Lerp(listObjects[points].transform.position, listObjects[points - 1].transform.position, 0.5f);
                 movementScript.mousePos = tujuan;
+                
                 movementScript.isMoving = true;
             }
 
@@ -97,5 +100,4 @@ public class Shoot : MonoBehaviour
         Vector2 ending = Vector2.Lerp(startPos, endPos, speed/5 * Time.deltaTime);
         //Tentacles4.SetPosition(1, ending);
     }
-
 }
