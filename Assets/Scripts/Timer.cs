@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
     // public Text timeText;
+    public Animator textAnimator;
 
     public ParticleSystem deathParticle;
     public SpriteRenderer sprite;
@@ -17,6 +18,8 @@ public class Timer : MonoBehaviour
     void Start()
     {
         timerIsRunning = true;
+        //textAnimator.Play("DeadTextAnim");
+
     }
 
     // Update is called once per frame
@@ -31,13 +34,13 @@ public class Timer : MonoBehaviour
                 DisplayTime(timeRemaining);
             }
             else
-            {
-                Debug.Log("Timer Run out!");
+            {                
                 timeRemaining = 0;
                 timerIsRunning = false;
 
                 Death();         
 
+                //Debug.Log("Timer Run out!");
                 //Destroy(gameObject);
             }
         }
@@ -50,13 +53,17 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        Debug.Log(string.Format("{0:00}:{1:00}", minutes, seconds));
+        //Debug.Log(string.Format("{0:00}:{1:00}", minutes, seconds));
     }
 
     void Death()
     {
-        deathParticle.Play();
+        shoot.enabled = false;
+        movement.enabled = false;
         sprite.enabled = false;
+
+        deathParticle.Play();
+
         shoot.Tentacles1.SetPosition(0, transform.position);
         shoot.Tentacles2.SetPosition(0, transform.position);
         shoot.Tentacles3.SetPosition(0, transform.position);
@@ -64,6 +71,7 @@ public class Timer : MonoBehaviour
         shoot.Tentacles2.SetPosition(1, transform.position);
         shoot.Tentacles3.SetPosition(1, transform.position);
 
-        movement.enabled = false;
+        textAnimator.SetBool("PlayerDead", true);
+
     }
 }
