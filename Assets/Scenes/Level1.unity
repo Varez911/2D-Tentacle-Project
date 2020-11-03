@@ -2777,7 +2777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c34e333611dc3f4c8fa0edab442e16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 5
+  timeRemaining: 30
   timerIsRunning: 0
   textAnimator: {fileID: 769313261}
   deathParticle: {fileID: 14860208}
