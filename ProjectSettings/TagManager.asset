@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Backgroud
+    uniqueID: 3031074377
+    locked: 0
   - name: Dinding
     uniqueID: 1234126363
     locked: 0
@@ -53,4 +56,10 @@ TagManager:
     locked: 0
   - name: Coin
     uniqueID: 764150891
+    locked: 0
+  - name: Player
+    uniqueID: 1938395583
+    locked: 0
+  - name: UI
+    uniqueID: 838260867
     locked: 0
