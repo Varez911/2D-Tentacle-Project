@@ -6,7 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     public Audio[] audios;
 
-    public static AudioManager instance;
+    public AudioManager instance;
+    private float musicVolume = 1f;
 
     private void Awake()
     {
@@ -27,7 +28,7 @@ public class AudioManager : MonoBehaviour
             a.source = gameObject.AddComponent<AudioSource>();
             a.source.clip = a.clip;
 
-            a.source.volume = a.volume;
+            a.source.volume = a.volume;            
             a.source.pitch = a.pitch;
             a.source.loop = a.loop;
         }
@@ -47,5 +48,15 @@ public class AudioManager : MonoBehaviour
             return;
         }
         a.source.Play();
+    }
+
+   public void updateVolume(float volume)
+    {
+        musicVolume = volume;        
+    }
+
+    private void Update()
+    {
+        gameObject.GetComponent<AudioSource>().volume = musicVolume;
     }
 }
