@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    public TextMeshProUGUI textTimeRemaining;
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
     // public Text timeText;
-    public Animator textAnimator;
+    public Animator deadAnimation;
 
     public ParticleSystem deathParticle;
     public SpriteRenderer sprite;
@@ -17,7 +20,8 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timerIsRunning = true;
+        timerIsRunning = false;
+        DisplayTime(timeRemaining - 1);
         //textAnimator.Play("DeadTextAnim");
 
     }
@@ -54,6 +58,7 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         //Debug.Log(string.Format("{0:00}:{1:00}", minutes, seconds));
+        textTimeRemaining.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     void Death()
@@ -71,7 +76,10 @@ public class Timer : MonoBehaviour
         shoot.Tentacles2.SetPosition(1, transform.position);
         shoot.Tentacles3.SetPosition(1, transform.position);
 
-        textAnimator.SetBool("PlayerDead", true);
+        deadAnimation.SetBool("isDead", true);
+
+
+
 
     }
 }

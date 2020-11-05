@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public Audio[] audios;
 
-    public AudioManager instance;
+    public static AudioManager instance;
     private float musicVolume = 1f;
 
     private void Awake()

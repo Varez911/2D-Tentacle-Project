@@ -6,6 +6,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     public Movement movementScript;
+    public Timer timer;
     public int jumlahPoint = 3;
     public Transform lokasiTembakan;
     public GameObject pointCollide;
@@ -48,13 +49,16 @@ public class Shoot : MonoBehaviour
             Tentacles3.SetPosition(1, lokasiTembakan.position);
         }
 
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             grab();
         }
-        
+        */
+
         if (Input.GetMouseButtonDown(1))
-        {                       
+        {
+            timer.timerIsRunning = true;
             shoot();
         }        
     }
