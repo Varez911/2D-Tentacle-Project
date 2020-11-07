@@ -4213,7 +4213,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
 --- !u!50 &1895015806
 Rigidbody2D:
   serializedVersion: 4
@@ -4411,7 +4411,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.63
+  m_Radius: 1.55
 --- !u!212 &2012102230
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4452,8 +4452,8 @@ SpriteRenderer:
   m_SortingLayerID: 764150891
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d65a445ed6589d4f9eef4a786366450, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ed1eb146332d02947833fdf0a37fc27e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4472,7 +4472,7 @@ Transform:
   m_GameObject: {fileID: 2012102228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5366516, y: -32.6545, z: 0}
-  m_LocalScale: {x: 0.53886074, y: 0.53886074, z: 0.53886074}
+  m_LocalScale: {x: 0.8372818, y: 0.8372818, z: 0.8372818}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
